@@ -5,12 +5,12 @@ output:
     keep_md: true
 ---
 
-For this assignment, we will first load and process the data. Also, we load r packages dplyr and ggplot2 to use later.
+For this assignment, we will first load and process the data. Also, we load r packages dplyr and ggplot2 to use later. 
 
 
 ```r
 ## Loading and preprocessing the data
-setwd("C:/Users/Sarah Lynn/Desktop/Self Study/Coursera DS JH - reproducible research/Week 2 course project")
+setwd("C:/Users/Sarah Lynn/Desktop/Self Study/Coursera DS JH - reproducible research/Week 2 project")
 unzip(zipfile="activity.zip")
 data0 <- read.csv("activity.csv")
 data0$date <- as.Date(data0$date,c("%Y-%m-%d"))
@@ -19,8 +19,8 @@ data0$date <- as.Date(data0$date,c("%Y-%m-%d"))
 ```r
 library(dplyr)
 library(ggplot2)
-options(scipen=999)
 ```
+
 
 
    
@@ -115,3 +115,4 @@ ggplot(data=steps_per_day3,mapping=(aes(x=interval,y=steps)))+geom_line()+facet_
 
 From this, it looks like weekdays have higher average steps in the morning (early intervals) as compared to weekend days, where the activity is better spread throughout the day.
 
+The end
